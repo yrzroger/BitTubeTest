@@ -1,0 +1,29 @@
+cc_defaults {
+    name: "BitTubeTest_defaults",
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wunused",
+        "-Wunreachable-code",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libcutils",
+        "liblog",
+        "libutils",
+        "libui",
+        "libgui",
+    ],
+}
+
+// ===========================================================
+
+cc_binary {
+    name: "BitTubeTest",
+    defaults: ["BitTubeTest_defaults"],
+
+    srcs: ["main_test.cpp"],
+}
